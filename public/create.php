@@ -58,6 +58,7 @@ if (isset($_POST['submit'])) {
     <label for="location">Location</label>
     <input type="text" name="location" id="location">
     <input type="submit" name="submit" value="Submit">
+    <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
   </form>
 
   <a href="index.php">Back to home</a>

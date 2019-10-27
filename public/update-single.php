@@ -77,6 +77,7 @@ if (isset($_GET['id'])) {
 	    <input type="text" name="<?php echo $key; ?>" id="<?php echo $key; ?>" value="<?php echo escape($value); ?>" <?php echo ($key === 'id' ? 'readonly' : null); ?>>
     <?php endforeach; ?> 
     <input type="submit" name="submit" value="Submit">
+    <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
 </form>
 
 <a href="index.php">Back to home</a>

@@ -74,6 +74,7 @@ try {
         <td><?php echo escape($row["location"]); ?></td>
         <td><?php echo escape($row["date"]); ?> </td>
         <td><button type="submit" name="submit" value="<?php echo escape($row["id"]); ?>">Delete</button></td>
+        <input name="csrf" type="hidden" value="<?php echo escape($_SESSION['csrf']); ?>">
       </tr>
     <?php endforeach; ?>
     </tbody>
